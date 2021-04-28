@@ -25,7 +25,7 @@ namespace Albion.Code
             engine.AddFilterOutV6(true);
 
             //allow incoming ping requests
-            engine.AddFilterInV6(true, new[] { Native.IPPROTO.ICMP });
+            engine.AddFilterInV4(true, new[] { Native.IPPROTO.ICMP });
 
             //allow incoming requests for DNS, HTTP, HTTPS
             engine.AddFilterInV4(true, new[] { Native.IPPROTO.TCP }, new [] { "53", "80", "443" });
