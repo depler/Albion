@@ -28,7 +28,7 @@ namespace Albion.Code
             engine.AddFilterInV4(true, new[] { Native.IPPROTO.ICMP });
 
             //allow incoming requests for DNS, HTTP, HTTPS
-            engine.AddFilterInV4(true, new[] { Native.IPPROTO.TCP }, new [] { "53", "80", "443" });
+            engine.AddFilterInV4(true, new[] { Native.IPPROTO.TCP }, new[] { "53", "80", "443" });
 
             //allow SMB and RDP incoming connections for specified network
             engine.AddFilterInV4(true, new[] { Native.IPPROTO.TCP }, new[] { "445", "3389" }, new[] { "192.168.1.0/24" });

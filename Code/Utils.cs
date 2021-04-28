@@ -15,9 +15,7 @@ namespace Albion.Code
             if (data.Length > bytesTotal)
                 throw new ArgumentOutOfRangeException(nameof(data));
 
-            Array.Reverse(data);
-            var addr = new BitArray(data);
-
+            var addr = new BitArray(data.Reverse().ToArray());
             var array = new uint[1];
             addr.CopyTo(array, 0);
             return array[0];
